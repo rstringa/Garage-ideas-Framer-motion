@@ -1,6 +1,7 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import Toggle from "./Toggler";
+import Toggle from './Toggler'
 
 const StyledHome = styled(motion.div)`
   display: flex;
@@ -15,20 +16,21 @@ const StyledHome = styled(motion.div)`
     margin-top: 100px;
   }
 
-  ${Toggle.Element} {
-    margin-bottom: 10px;
-  }
 `;
 
+
 export default function App() {
+
   return (
     <StyledHome>
-      <Toggle />
-      <Toggle />
-      <Toggle />
-      <Toggle />
-      <Toggle />
-      <Toggle />
+      <Toggle w={200} />
+
+      <Toggle w={200}>
+        <div>
+          Chau
+        </div>
+      </Toggle>
+
     </StyledHome>
   );
 }
